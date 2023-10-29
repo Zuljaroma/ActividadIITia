@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+   
+   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+   <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>Actividad I Grupal</title>
+    
+    <script type="text/javascript">
+            function draw(){ 
+                // Seleccion de nodo
+                d3.select("h1#headline").text("Visualización de Pensionados de Madrid por Genero");
+            }
+        
+        
+   
+        d3.csv("datos.csv").then(function(data){
+            console.log("Datos cargados");
+            
+            // Este código se ejecutará después de cargar los datos
+            d3.select("h1#headline").text("Visualización de Pensionados de Madrid por Genero");
+            
+            d3.select("body").append("h1").text("Segunda Sección");
+        });
+    
+    </script>
+</head>
+<body onload="draw()">
+<h1 id="headline"></h1>
+
+<h3> Visualización de Pensionados de Madrid por Genero</h3>
+
+
+</body>
+</html>
